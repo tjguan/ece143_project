@@ -9,28 +9,38 @@ import pandas as pd
 
 import matplotlib.pyplot as plt
 
-# If you're using Basemap, you need to install it with `conda install basemap` or `pip install basemap`
-
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
+import xarray as xr
+
 
 if __name__ == "__main__":
     
-    
+    topograph = xr.open_dataset('C:/Users/jerem/Downloads/ETOPO_2022_v1_60s_N90W180_bed.nc')
+    topograph = topograph.to_dataframe()
+    topograph = topograph.reset_index()
+    lon = topograph['lon']
+    lat = topograph['lat']
     df = pd.read_csv('C:/Users/jerem/Downloads/Meteorite_Landings.csv')
-    # Initialize a Cartopy figure with PlateCarree projection
-    fig, ax = plt.subplots(figsize=(12, 8), subplot_kw={'projection': ccrs.PlateCarree()})
+    df = df.dropna(subset=['reclong', 'reclat'])
+    
+    #print(topograph)
+    #print(topograph.columns)
+    #latitudes = df.index.get_level_values(0)
+    #longitudes = df.index.get_level_values(1)
+    # Initialize a Cartopy figure with Mercator projection
+    #image_data = topograph['z']
+    fig, ax = plt.subplots(figsize=(100, 100), subplot_kw={'projection': ccrs.Mercator()})
 
-    # Add features for context
+    #sc = ax.scatter(lon, lat, c=topograph['z'], transform=ccrs.PlateCarree())
+    # Add features
     ax.add_feature(cfeature.COASTLINE)
     ax.add_feature(cfeature.BORDERS, linestyle=':')
-
-    # Plot the meteorite locations on the map
-    ax.scatter(df['reclong'], df['reclat'], s=10, color='red', marker='o', alpha=0.75)
+    
+    ax.scatter(df['reclong'], df['reclat'],color='red', transform=ccrs.PlateCarree())
     # Set the extent of the map if needed
     ax.set_extent([-180, 180, -90, 90])
 
-    # Show the plot
     plt.show()
 
 
