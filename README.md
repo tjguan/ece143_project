@@ -22,11 +22,13 @@ Figure. A topological map overlaid on top of scatter plot of the meteorites (the
 ## File Structure 
     ├─ Root
         ├─ README.md
-        ├─ data	   
+        ├─ Data_set	   
             ├─ Meteorite_Landings.csv
-        ├─ code
+            ├─ Continents.csv
+        ├─ Code
             ├─ meteorite_project.ipynb
-        ├─ slides
+            ├─ meteorite_project.py
+        ├─ Slides
             ├─ ECE 143 Team 9 Presentation.pdf
         ├─ Fig    
             ├─ world_map.png
