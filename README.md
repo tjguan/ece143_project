@@ -22,12 +22,15 @@ Figure. A topological map overlaid on top of scatter plot of the meteorites (the
 ## File Structure 
     ├─ Root
         ├─ README.md
-        ├─ data	   
+        ├─ Data_set	   
             ├─ Meteorite_Landings.csv
-        ├─ code
+            ├─ Continents.csv
+        ├─ Code
             ├─ meteorite_project.ipynb
-        ├─ slides
+            ├─ meteorite_project.py
+        ├─ Slides
             ├─ ECE 143 Team 9 Presentation.pdf
+            ├─ ECE 143 Team 9 Presentation
         ├─ Fig    
             ├─ world_map.png
 
@@ -39,6 +42,10 @@ Figure. A topological map overlaid on top of scatter plot of the meteorites (the
     Matplolib
     Seaborn
     Cartopy
+
+## Presentation Link
+
+https://docs.google.com/presentation/d/1M_xisTddD40RtB-TG1Whck82eeoZnFnuX2P7t-EBaPg/edit?usp=sharing
 
 
 
