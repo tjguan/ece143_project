@@ -30,6 +30,7 @@ Figure. A topological map overlaid on top of scatter plot of the meteorites (the
             ├─ meteorite_project.py
         ├─ Slides
             ├─ ECE 143 Team 9 Presentation.pdf
+            ├─ ECE 143 Team 9 Presentation
         ├─ Fig    
             ├─ world_map.png
 
