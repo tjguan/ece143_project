@@ -29,8 +29,8 @@ Figure. A topological map overlaid on top of scatter plot of the meteorites (the
             ├─ meteorite_project.ipynb
             ├─ meteorite_project.py
         ├─ Slides
-            ├─ ECE 143 Team 9 Presentation.pdf
-            ├─ ECE 143 Team 9 Presentation
+            ├─ ECE 143 Team 9 Presentation.pptx
+            ├─ ECE 143 Project Team Number 9.pdf
         ├─ Fig    
             ├─ world_map.png
 
@@ -39,7 +39,7 @@ Figure. A topological map overlaid on top of scatter plot of the meteorites (the
 ## Third Party Modules
     Numpy
     Pandas
-    Matplolib
+    Matplotlib
     Seaborn
     Cartopy
 
